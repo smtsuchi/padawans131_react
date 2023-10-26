@@ -7,6 +7,7 @@ import Login from './Login';
 import News from './News';
 import Feed from './Feed';
 import SinglePost from './SinglePost';
+import SignUp from './SignUp';
 
 export default class App extends Component {
   constructor() {
@@ -23,8 +24,6 @@ export default class App extends Component {
       count: this.state.count + 1
     })
   }
-
-  
 
   logMeIn = (e) => {
     e.preventDefault();
@@ -48,6 +47,8 @@ export default class App extends Component {
           <Route path='/news' element={<News />}/>
           <Route path='/posts' element={<Feed />}/>
           <Route path='/posts/:postId' element={<SinglePost />}/>
+          <Route path='/signup' element={<SignUp />}/>
+          {/* <Route path='/posts/:postId' element={<SinglePost />}/> */}
         </Routes>
       </div>
     )
